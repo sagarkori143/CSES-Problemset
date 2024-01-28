@@ -59,14 +59,23 @@ typedef map<string, ll> mpsl;
 void solve()
 {
 //Try to put fast; before taking inputs as mentioned bby kori
+long long int n;
+cin>>n;
+long long int ans=0;
+vector<long long int> arr(n);
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+    if(i>0 && arr[i]<arr[i-1]){
+        ans+=arr[i-1]-arr[i];
+        arr[i]=arr[i-1];
+    }
+}
+cout<<ans;
 
 }
 
 int main()
 {
-    ll t;
-    fast;
-    cin >> t;
-    while (t--)
+    
         solve();
 }
