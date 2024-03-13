@@ -1,14 +1,14 @@
 //---------------Welcome To Sagar Kori's Submission------------//
- 
+
 //--------------Pata hai stalking achi baat nahi hoti---------//
- 
+
 //---------------Besharam hai pura... Padhte hi jaa rha hai----//
- 
+
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 // Defining some datatypes here :)
- 
+
 typedef long long int ll;
 #define all(v) v.begin(), v.end()
 #define For0 for (ll i = 0; i < n; i++)
@@ -24,22 +24,22 @@ typedef long long int ll;
 #define S second
 #define B begin()
 #define E end()
- 
+
 typedef set<int> sti;
 typedef multiset<int> msti;
 typedef multiset<long long> mstl;
- 
+
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<pair<int, int>> vpi;
 typedef vector<bool> vb;
 typedef vector<string> vs;
- 
+
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef pair<string, int> psi;
 typedef pair<string, ll> psl;
- 
+
 typedef map<int, int> mpii;
 typedef map<ll, ll> mpll;
 typedef map<string, int> mpsi;
@@ -47,37 +47,39 @@ typedef map<string, ll> mpsl;
 #define fast    \
     cin.tie(0); \
     cin.sync_with_stdio(0);
- 
+
 //-------------------DEFINED-------------------//
- 
+
 #define Y cout << "YES\n";
 #define N cout << "NO\n";
 #define nl cout << '\n';
 #define fg bool flag = false;
 #define ll long long
- 
+
 void solve()
 {
 //Try to put fast; before taking inputs as mentioned bby kori
 ll int n;
 cin>>n;
-ll int ans=0;
-unordered_map<ll int,ll int> hash(n);
-for(ll int i=0;i<n;i++){
+ll int ans=INT_MIN;
+ll int sum=0;
+For0{
     ll int x;
     cin>>x;
-    if(hash[x]==0){
-        ans++;
-        hash[x]++;
+    sum+=x;
+    ans=max(ans,sum);
+    if(sum<0){
+        sum=0;
     }
-    
+
+
 }
 cout<<ans;
- 
+
 }
- 
+
 int main()
 {
- 
+    
         solve();
 }
